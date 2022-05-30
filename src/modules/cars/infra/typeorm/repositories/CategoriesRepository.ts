@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
-import { Category } from "../../entities/Category";
+import { Category } from "../entities/Category";
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,
-} from "../ICategoriesRepository";
+} from "@modules/cars/repositories/ICategoriesRepository";
 
 import { getRepository, Repository, TreeChildren } from "typeorm";
 
