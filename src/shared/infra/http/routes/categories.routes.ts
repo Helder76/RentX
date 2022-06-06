@@ -5,8 +5,8 @@ import { CreateCategoryController } from "@modules/cars/useCases/createCategory/
 import { ImportCategoryController } from "@modules/cars/useCases/importCategories/ImportCategoryController";
 import { ListCategoriesController } from "@modules/cars/useCases/listCategories/ListCategoriesController";
 
+import { ensureAuthenticated } from "@shared/infra/http/middlewares/ensureAuthenticated"
 import { ensureAdmin } from "@shared/infra/http/middlewares/ensureAdmin";
-import { ensureAuthenticated } from "@shared/infra/http/middlewares//ensureAuthenticated";
 
 const categoriesRoutes = Router();
 const upload = multer({
@@ -25,8 +25,8 @@ categoriesRoutes.post("/",
 
 categoriesRoutes.get(
   "/",
-  ensureAuthenticated,
-  ensureAdmin,
+  // ensureAuthenticated,
+  // ensureAdmin,
   listCategoriesController.handle
 );
 
